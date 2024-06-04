@@ -2,20 +2,28 @@
 export default {
     props: {
         cardObj: Object,
+        
     },
+    data() {
+        return {
+            
+        };
+    },
+    
 };
 </script>
 
 <template>
-
-    <img :src="cardObj.image" alt="" class="rounded-circle p-2" />
-    <div class="infos">
-        <h4>{{ cardObj.name }}</h4>
-        <p>{{ cardObj.species }}</p>
-        <p> {{ cardObj.status }}</p>
+  <div class="card p-3 mt-5">
+    <img :src="cardObj.image" class="card-img-top rounded-circle" alt="Character Image">
+    <div class="card-body">
+      <h5 class="card-title">{{ cardObj.name }}</h5>
+      <p class="card-text">{{ cardObj.species }}</p>
+      <p class="card-text">{{ cardObj.status }}</p>
     </div>
-
+  </div>
 </template>
+
 
 <style lang="scss" scoped>
 .infos {

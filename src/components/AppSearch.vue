@@ -14,13 +14,14 @@ export default {
     <div class="container py-4">
         <div class="d-flex justify-content-between">
             <div>
-                <select @change="$emit('filter')" v-model="store.selectedStatus">
+                <select class="form-select" @change="$emit('filter')" v-model="store.selectedStatus">
                     
                     <option :value="state" v-for="state in options" :key="state">
                         
                         {{ state }}
                     </option>
                 </select>
+               
             </div>
         </div>
     </div>
